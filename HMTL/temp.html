@@ -1,0 +1,47 @@
+<style media="screen">
+  .container{
+    display: grid;
+    grid-template-areas:
+          "header"
+          "Updates/ML Recommendations"
+          "content"
+          "footer";
+    grid-template-columns:1fr;
+    grid-template-rows:50px auto 1fr auto;
+    width:100%;
+    min-height:100%;
+    background:#272933;
+    color:white;
+  }
+  .areaHeader {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
+
+  .areaUpdates {
+    background: LightSalmon;
+    grid-area: Updates/ML Recommendations;
+  }
+
+  .areaContent {
+    background: PaleTurquoise;
+    grid-area: content;
+  }
+
+  .areaFooter {
+    background: lightpink;
+    grid-area: footer;
+  }
+</style>
+
+nav ul {
+  margin: 0px;
+  padding: 5px 0px 5px
+}
+nav li{
+  display: inline;
+  margin-right: 20px;
+}
+a{
+  text-decoration:none;
+}
