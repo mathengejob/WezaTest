@@ -2,398 +2,178 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Weza Education</title>
-    <link rel="icon" href="C:\Users\Job\github\responsivewebpage\Resources\Logo\logo.jpg" type="image/x-icon">
-    <meta content="WEZA Education is a platform where Learner meet Experts delivering content in most friendly Virtual way." name="description">
-    <meta content="WEZA, Edu , Education, Virtual learning, Experts, Learner, Online" name="keywords">
-    <meta content="WEZA Education" name="author">
+    <title>Experts Course Entry Form</title>
     <style media="screen">
-
-       #navBar{
-         position:fixed;
-             left: 0;
-             top: 0;
-             right: 0;
-             bottom: auto;
-             height: 80px;
-             border: 5px solid #000;
-             background-color: #fff;
-             margin-left:7px;margin-right:7px;
-               text-align:right;
-
-         }
-      html, body {
-
-           height: 100%;
-       }
-       body {
-           padding-top: 50px;
-       }
-       .wrap {
-           height: 100%;
-           overflow:auto;
-
-       }
-       nav ul {
-         margin: 0px;
-         padding: 20px 10px 5px;
-         font-family:google;
-         font-size:40px;
-       }
-       nav li{
-         display: inline;
-         margin-right: 20px;
-       }
-       a{
-         text-decoration:none;
-       }
-       #box1 {
-       background-color: dodgerblue;
-       height: 100px;
-       flex-grow:1;
-         }
-
-     #box2 {
-       background-color: orangered;
-       height: 100px;
-       flex-glow:2;
-     }
-
-
-      .areaContent {
-        background:black;
-        grid-area: content;
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        grid-template-rows:1fr;
-        padding:2px;
-        left:0;
-        right:0;
+      .box-container {
+        background-image:linear-gradient(90deg, rgba(22,20,45,1) 0%, rgba(35,74,63,0.8) 29%, rgba(6,54,64,0.8) 82%),
+              url('ExpertB.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position:center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
       }
+      .box-1 {
+        margin-top: 150px;
+        flex: center;
+        background: linear-gradient(90deg, rgba(68,64,140,0.7) 0%, rgba(78,163,139,0.7) 59%, rgba(16,127,149,0.7) 82%);
+        border-top-right-radius: 40px;
+        border-top-left-radius: 40px;
+        width: 70%;
+        height: 100%;
+        padding:40px;
 
-      .areaFooter {
-        background: lightpink;
-        grid-area: footer;
-        text-align:center;
       }
-      .container{
+      header{
+        color: white;
+        font-family:calibri;
+        padding-left: 30px;
+        font-size: 30px;
+      }
+      input[type=text],input[type=number],input[type=date],input[type=file], select,textarea {
+        font-size:30px;
+        width: 100%;
+        padding: 12px 20px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        box-sizing: border-box;
+        margin-bottom:40px;
+
+      }
+      input[type=submit] {
+        font-size:30px;
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .smaller{
+        font-size:25px;
+        padding: 14px 20px;
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      input[type=number]::-webkit-inner-spin-button,
+      input[type=number]::-webkit-outer-spin-button {
+
+      -webkit-appearance: "Always Show Up/Down Arrows";
+      opacity: 1;
+      }
+      label {
+          display: flex;
+          align-items: center;
+          font-size: 1.125rem;
+          margin-bottom: 2rem;
+          font-family: 'Poppins', sans-serif;
+          font-size: 40px;
+          font-weight: 400;
+          line-height: 1.4;
+          color: white;
+          margin-bottom:0px;
+      }
+      legend{
+        display: flex;
+        align-items: center;
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: white;
+        margin-bottom:0px;
+      }
+      input[type="radio"] {
         display: grid;
-        grid-template-columns:1fr;
-        grid-template-rows:1fr auto;
-        width:100%;
-        height:100%;
-        min-height:100%;
-        background:#cecfd6;
-        color:white;
-        grid-gap:1px;
-        grid-template-areas:
-
-             "content"
-              "footer";
+        -ms-transform: scale(2); /* IE 9 */
+        -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+        transform: scale(2);
       }
-    @media (min-width: 300px){
-    .container{
-      left:0;
-      right:0;
-        grid-template-columns:  auto;
-        grid-template-rows: auto 60px;
-        grid-template-areas:
+      input[type="checkbox"] {
+        display: grid;
+        -ms-transform: scale(2); /* IE 9 */
+        -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+        transform: scale(2);
+      }
 
-        " content"
-        "  footer";
-    }
-    }
 
-    @media (min-width: 400px){
-  .container{
-    grid-template-columns: auto;
-    grid-template-rows: auto 60px;
-    grid-template-areas:
-
-      " content"
-      " footer";
-    }
-    }
-
-    .expertsCard{
-      width: 1fr;
-      border: 1px solid #ccc;
-      background:white;
-      color:black;
-      margin: 2px 2px;
-      padding: 10px;
-
-    }
-    .cardContent{
-      padding:10px;
-    }
 
     </style>
+    </head>
+    <body>
+    <div class="box-container">
+      <div class="box-1">
+       <header ><h1>Experts Personal and Course Details:</h1> </header>
+       <section>
+         <form>
+           <select id="Title" name="U">
+            <option value="Mr">Dr.</option>
+            <option value="Miss">Mr.</option>
+            <option value="Dr">Mrs.</option>
+          </select>
+           <label class="formText" >Name</label>
+           <input type="text" name="U" placeholder="John Doe"></input>
+           <label class="formText" >Email</label>
 
-  </head>
-  <body>
-  <div id="navBar"><nav><ul> <li><a href="">Home</a></li><li><a href="">Welcome_Learners</a></li><li><a href="">Welcome_Experts</a></li> </ul></nav> </div>
-    <div class="container" class="wrap">
-        <div class="areaContent">
-        <div class="expertsCard">
-          <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
-          <div class="profile-name">
-                <h3>Quincy Larson</h3>
-                <h4>@ossia56566768</h4>
-              </div>
-              <div class="follow-btn">
-                <button>Apply Course</button>
-              </div>
+          <input type="text" name="U" placeholder="doe@gmail.com"></input>
+          <form action="/action_page.php">
+            <label class="formText" for="img">Please upload your photo: </label>
+            <input type="file" id="img" name="img" accept="image/*">
+          </form>
 
-              <div id="inner">
-              <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
-              <span class="date">1:32 PM - 12 Jan 2018</span>
-              <hr>
-              </div>
-              <footer>
-              <div class="stats">
-                <div class="tweets">
-                  <strong>107</strong> Students
-                </div>
-                <div class="likes">
-                  <strong>431</strong> Likes
-                </div>
-              </div>
-              <div class="cta">
-                <button class="share-btn">Share</button>
-                <button class="tweet-btn">tweet</button>
-                <button class="like-btn">Like</button>
-              </div>
+          <form action="/action_page.php">
+            <label class="formText" for="img">Please upload your resume: </label>
+            <input type="file" id="img" name="img" accept=".pdf">
+          </form>
 
-       </div>
-       <div class="expertsCard">
-           <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
-           <div class="profile-name">
-                 <h3>Quincy Larson</h3>
-                 <h4>@ossia56566768</h4>
-               </div>
-               <div class="follow-btn">
-                 <button>Apply Course</button>
-               </div>
+           <label class="formText" >Course Name</label>
+           <input type="text" name="" placeholder="Course"></input>
+          <label class="formText" >Course Duration</label>
+           <input type="number" name="U" placeholder="Duration in months" min="3" max="6"></input>
+           <fieldset>
+           <legend class="formText" >Category</legend>
+           <label><input type="radio" name="U_2" value="Tech">  Technology</input></label>
+           <label><input type="radio" name="U_2" value="Tech">    Medicine</input></label>
+           <label><input type="radio" name="U_2" value="Tech">  Human Resource</input></label>
+           <label><input type="radio" name="U_2" value="Tech">  Engineering</input></label>
+           <label><input type="radio" name="U_2" value="Tech"> Agriculture</input></label>
+         </fieldset>
 
-               <div id="inner">
-               <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
-               <span class="date">1:32 PM - 12 Jan 2018</span>
-               <hr>
-               </div>
-               <footer>
-               <div class="stats">
-                 <div class="tweets">
-                   <strong>107</strong> Students
-                 </div>
-                 <div class="likes">
-                   <strong>431</strong> Likes
-                 </div>
-               </div>
-               <div class="cta">
-                 <button class="share-btn">Share</button>
-                 <button class="tweet-btn">tweet</button>
-                 <button class="like-btn">Like</button>
-               </div>
+            <fieldset>
+           <legend class="formText" >Audience</legend>
+          <label><input name="prefer" value="front-end-projects" type="checkbox" class="formText">Front-end Projects</label>
+          <label>
+            <input name="prefer" value="back-end-projects" type="checkbox" class="formText">Lectures</label>
+          <label><input name="prefer" value="data-visualization" type="checkbox" class="formText">Undergradates</label>
+          <label><input name="prefer" value="challenges" type="checkbox" class="formText">Practitioners</label>
+          <label><input name="prefer" value="open-source-community" type="checkbox" class="formText">Companies</label>
+          <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="formText">Government arms</label>
+        </fieldset>
 
-      </div>
-      <div class="expertsCard">
-
-          <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
-          <div class="profile-name">
-                <h3>Quincy Larson</h3>
-                <h4>@ossia56566768</h4>
-              </div>
-              <div class="follow-btn">
-                <button>Apply Course</button>
-              </div>
-
-              <div id="inner">
-              <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
-              <span class="date">1:32 PM - 12 Jan 2018</span>
-              <hr>
-              </div>
-              <footer>
-              <div class="stats">
-                <div class="tweets">
-                  <strong>107</strong> Students
-                </div>
-                <div class="likes">
-                  <strong>431</strong> Likes
-                </div>
-              </div>
-              <div class="cta">
-                <button class="share-btn">Share</button>
-                <button class="tweet-btn">tweet</button>
-                <button class="like-btn">Like</button>
-              </div>
-
-     </div>
-       <div class="expertsCard">
-           <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
-           <div class="profile-name">
-                 <h3>Quincy Larson</h3>
-                 <h4>@ossia56566768</h4>
-               </div>
-               <div class="follow-btn">
-                 <button>Apply Course</button>
-               </div>
-
-               <div id="inner">
-               <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
-               <span class="date">1:32 PM - 12 Jan 2018</span>
-               <hr>
-               </div>
-               <footer>
-               <div class="stats">
-                 <div class="tweets">
-                   <strong>107</strong> Students
-                 </div>
-                 <div class="likes">
-                   <strong>431</strong> Likes
-                 </div>
-               </div>
-               <div class="cta">
-                 <button class="share-btn">Share</button>
-                 <button class="tweet-btn">tweet</button>
-                 <button class="like-btn">Like</button>
-               </div>
+        <label for="input1">Preffered starting Date:</label>
+        <input type="date" id="input1" name="input1">
+        <label class="formText" >Charges for the sessions</label>
+         <input type="number" name="U" placeholder="KSh per learner per package" min="4000" max="6000"></input>
+        <label for="comment">Provide an executive summary for your course <span class="smaller">(less than 300 words)</span></label>
+       <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your summary here..." spellcheck="true"></textarea>
+      <input type="submit" value="Submit">
+         </form>
+       </section>
 
 
       </div>
-        <div class="expertsCard">
-            <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
-            <div class="profile-name">
-                  <h3>Quincy Larson</h3>
-                  <h4>@ossia56566768</h4>
-                </div>
-                <div class="follow-btn">
-                  <button>Apply Course</button>
-                </div>
-
-                <div id="inner">
-                <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
-                <span class="date">1:32 PM - 12 Jan 2018</span>
-                <hr>
-                </div>
-                <footer>
-                <div class="stats">
-                  <div class="tweets">
-                    <strong>107</strong> Students
-                  </div>
-                  <div class="likes">
-                    <strong>431</strong> Likes
-                  </div>
-                </div>
-                <div class="cta">
-                  <button class="share-btn">Share</button>
-                  <button class="tweet-btn">tweet</button>
-                  <button class="like-btn">Like</button>
-                </div>
-
-       </div>
-       <div class="expertsCard">
-
-           <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
-           <div class="profile-name">
-                 <h3>Quincy Larson</h3>
-                 <h4>@ossia56566768</h4>
-               </div>
-               <div class="follow-btn">
-                 <button>Apply Course</button>
-               </div>
-
-               <div id="inner">
-               <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
-               <span class="date">1:32 PM - 12 Jan 2018</span>
-               <hr>
-               </div>
-               <footer>
-               <div class="stats">
-                 <div class="tweets">
-                   <strong>107</strong> Students
-                 </div>
-                 <div class="likes">
-                   <strong>431</strong> Likes
-                 </div>
-               </div>
-               <div class="cta">
-                 <button class="share-btn">Share</button>
-                 <button class="tweet-btn">tweet</button>
-                 <button class="like-btn">Like</button>
-               </div>
-
-
-      </div>
-      <div class="expertsCard">
-
-          <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
-          <div class="profile-name">
-                <h3>Quincy Larson</h3>
-                <h4>@ossia56566768</h4>
-              </div>
-              <div class="follow-btn">
-                <button>Apply Course</button>
-              </div>
-
-              <div id="inner">
-              <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
-              <span class="date">1:32 PM - 12 Jan 2018</span>
-              <hr>
-              </div>
-              <footer>
-              <div class="stats">
-                <div class="tweets">
-                  <strong>107</strong> Students
-                </div>
-                <div class="likes">
-                  <strong>431</strong> Likes
-                </div>
-              </div>
-              <div class="cta">
-                <button class="share-btn">Share</button>
-                <button class="tweet-btn">tweet</button>
-                <button class="like-btn">Like</button>
-              </div>
-
-
-     </div>
-     <div class="expertsCard">
-
-         <img src="https://freecodecamp.s3.amazonaws.com/quincy-twitter-photo.jpg" alt="Quincy Larson's profile picture" class="profile-thumbnail">
-         <div class="profile-name">
-               <h3>Quincy Larson</h3>
-               <h4>@ossia56566768</h4>
-             </div>
-             <div class="follow-btn">
-               <button>Apply Course</button>
-             </div>
-
-             <div id="inner">
-             <p>I meet so many people who are in search of that one trick that will help them work smart. Even if you work smart, you still have to work hard.</p>
-             <span class="date">1:32 PM - 12 Jan 2018</span>
-             <hr>
-             </div>
-             <footer>
-             <div class="stats">
-               <div class="tweets">
-                 <strong>107</strong> Students
-               </div>
-               <div class="likes">
-                 <strong>431</strong> Likes
-               </div>
-             </div>
-             <div class="cta">
-               <button class="share-btn">Share</button>
-               <button class="tweet-btn">tweet</button>
-               <button class="like-btn">Like</button>
-             </div>
-
-
     </div>
-      </div>
-      <div class="areaFooter"><footer><h2>Footer</h2></footer></div>
-     </div>
-
-  </body>
-</html>
+    </body>
+    </html>
